@@ -54,6 +54,7 @@ sources:
       sample_set:
         description: 'Sample set.'
         type: str
+        default: AG1000G-AO
     args:
       urlpath: 'gcs://vo_agam_release/v3/snp_genotypes/all/{{sample_set}}/'
       consolidated: true
