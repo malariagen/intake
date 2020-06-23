@@ -1,0 +1,57 @@
+metadata:
+  version: 1
+
+sources:
+
+  sample_sets:
+    description: 'Manifest of sample sets.'
+    driver: csv
+    args:
+      urlpath: gs://vo_agam_release/v3.1/manifest.tsv
+      csv_kwargs:
+        sep: "	"
+
+  samples:
+    description: 'Sample metadata for a given sample set.'
+    driver: csv
+    parameters:
+      sample_set:
+        description: 'Sample set.'
+        type: str
+        default: 1177-VO-ML-LEHMANN-MNF00004
+    args:
+      urlpath: gs://vo_agam_release/v3.1/metadata/general/{{sample_set}}/samples.meta.csv
+
+  species_calls_20200422_aim:
+    description: 'Species calls via ancestry informative markers for a given sample set.'
+    driver: csv
+    parameters:
+      sample_set:
+        description: 'Sample set.'
+        type: str
+        default: 1177-VO-ML-LEHMANN-MNF00004
+    args:
+      urlpath: gs://vo_agam_release/v3.1/metadata/species_calls_20200422/{{sample_set}}/samples.species_aim.csv
+
+  species_calls_20200422_pca:
+    description: 'Species calls via principal components analysis for a given sample set.'
+    driver: csv
+    parameters:
+      sample_set:
+        description: 'Sample set.'
+        type: str
+        default: 1177-VO-ML-LEHMANN-MNF00004
+    args:
+      urlpath: gs://vo_agam_release/v3.1/metadata/species_calls_20200422/{{sample_set }}/samples.species_pca.csv
+
+  snp_genotypes:
+    description: 'Single nucleotide polymorphism genotypes for a given sample set.'
+    driver: zarr_cat
+    parameters:
+      sample_set:
+        description: 'Sample set.'
+        type: str
+        default: 1177-VO-ML-LEHMANN-MNF00004
+    args:
+      urlpath: gs://vo_agam_release/v3.1/snp_genotypes/all/{{sample_set}}
+      consolidated: true
