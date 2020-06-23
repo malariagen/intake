@@ -4,37 +4,37 @@ metadata:
 sources:
 
   samples:
-    description: 'Sample metadata.'
+    description: "Sample metadata."
     driver: csv
     args:
-      urlpath: gs://ag1000g-release/phase2.AR1/samples/samples.meta.txt
+      urlpath: "gs://ag1000g-release/phase2.AR1/samples/samples.meta.txt"
       csv_kwargs:
         sep: "	"
 
   snps:
-    description: 'SNP calls in wild samples, unfiltered.'
+    description: "SNP calls in wild samples, unfiltered."
     driver: zarr_cat
     args:
-      urlpath: gs://ag1000g-release/phase2.AR1/variation/main/zarr/all/ag1000g.phase2.ar1
+      urlpath: "gs://ag1000g-release/phase2.AR1/variation/main/zarr/all/ag1000g.phase2.ar1"
       consolidated: true
 
   snps_pass:
-    description: 'SNP calls in wild samples, PASS variants only.'
+    description: "SNP calls in wild samples, PASS variants only."
     driver: zarr_cat
     args:
-      urlpath: gs://ag1000g-release/phase2.AR1/variation/main/zarr/pass/ag1000g.phase2.ar1.pass
+      urlpath: "gs://ag1000g-release/phase2.AR1/variation/main/zarr/pass/ag1000g.phase2.ar1.pass"
       consolidated: true
 
   snps_pass_biallelic:
-    description: 'SNP calls in wild samples, biallelic PASS variants only.'
+    description: "SNP calls in wild samples, biallelic PASS variants only."
     driver: zarr_cat
     args:
-      urlpath: gs://ag1000g-release/phase2.AR1/variation/main/zarr/biallelic/ag1000g.phase2.ar1.pass.biallelic
+      urlpath: "gs://ag1000g-release/phase2.AR1/variation/main/zarr/biallelic/ag1000g.phase2.ar1.pass.biallelic"
       consolidated: true
 
   haps:
-    description: 'Haplotypes in wild samples.'
+    description: "Haplotypes in wild samples."
     driver: zarr_cat
     args:
-      urlpath: gs://ag1000g-release/phase2.AR1/haplotypes/main/zarr/ag1000g.phase2.ar1.haplotypes
+      urlpath: "gs://ag1000g-release/phase2.AR1/haplotypes/main/zarr/ag1000g.phase2.ar1.haplotypes"
       consolidated: true

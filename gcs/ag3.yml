@@ -4,79 +4,79 @@ metadata:
 sources:
 
   sample_sets:
-    description: 'Manifest of sample sets.'
+    description: "Manifest of sample sets."
     driver: csv
     args:
-      urlpath: gs://vo_agam_release/v3/manifest.tsv
+      urlpath: "gs://vo_agam_release/v3/manifest.tsv"
       csv_kwargs:
         sep: "	"
 
   samples:
-    description: 'Sample metadata for a given sample set.'
+    description: "Sample metadata for a given sample set."
     driver: csv
     parameters:
       sample_set:
-        description: 'Sample set.'
+        description: "Sample set."
         type: str
     args:
-      urlpath: gs://vo_agam_release/v3/metadata/general/{{sample_set}}/samples.meta.csv
+      urlpath: "gs://vo_agam_release/v3/metadata/general/{{sample_set}}/samples.meta.csv"
 
   species_calls_20200422_aim:
-    description: 'Species calls via ancestry informative markers for a given sample set.'
+    description: "Species calls via ancestry informative markers for a given sample set."
     driver: csv
     parameters:
       sample_set:
-        description: 'Sample set.'
+        description: "Sample set."
         type: str
     args:
-      urlpath: gs://vo_agam_release/v3/metadata/species_calls_20200422/{{sample_set}}/samples.species_aim.csv
+      urlpath: "gs://vo_agam_release/v3/metadata/species_calls_20200422/{{sample_set}}/samples.species_aim.csv"
 
   species_calls_20200422_pca:
-    description: 'Species calls via principal components analysis for a given sample set.'
+    description: "Species calls via principal components analysis for a given sample set."
     driver: csv
     parameters:
       sample_set:
-        description: 'Sample set.'
+        description: "Sample set."
         type: str
     args:
-      urlpath: gs://vo_agam_release/v3/metadata/species_calls_20200422/{{sample_set}}/samples.species_pca.csv
+      urlpath: "gs://vo_agam_release/v3/metadata/species_calls_20200422/{{sample_set}}/samples.species_pca.csv"
 
   snp_sites:
-    description: 'Genomic sites at which single nucleotide polymorphism genotypes were called.'
+    description: "Genomic sites at which single nucleotide polymorphism genotypes were called."
     driver: zarr_cat
     args:
-      urlpath: gs://vo_agam_release/v3/snp_genotypes/all/sites
+      urlpath: "gs://vo_agam_release/v3/snp_genotypes/all/sites"
       consolidated: true
 
   snp_genotypes:
-    description: 'Single nucleotide polymorphism genotypes for a given sample set.'
+    description: "Single nucleotide polymorphism genotypes for a given sample set."
     driver: zarr_cat
     parameters:
       sample_set:
-        description: 'Sample set.'
+        description: "Sample set."
         type: str
         default: AG1000G-AO
     args:
-      urlpath: gs://vo_agam_release/v3/snp_genotypes/all/{{sample_set}}
+      urlpath: "gs://vo_agam_release/v3/snp_genotypes/all/{{sample_set}}"
       consolidated: true
 
   site_filters_dt_20200416_arab:
-    description: 'Site filters for use with SNP data for An. arabiensis samples.'
+    description: "Site filters for use with SNP data for An. arabiensis samples."
     driver: zarr_cat
     args:
-      urlpath: gs://vo_agam_release/v3/site_filters/dt_20200416/arab
+      urlpath: "gs://vo_agam_release/v3/site_filters/dt_20200416/arab"
       consolidated: true
 
   site_filters_dt_20200416_gamb_colu:
-    description: 'Site filters for use with SNP data for An. gambiae and/or An. coluzzii samples.'
+    description: "Site filters for use with SNP data for An. gambiae and/or An. coluzzii samples."
     driver: zarr_cat
     args:
-      urlpath: gs://vo_agam_release/v3/site_filters/dt_20200416/gamb_colu
+      urlpath: "gs://vo_agam_release/v3/site_filters/dt_20200416/gamb_colu"
       consolidated: true
 
   site_filters_dt_20200416_gamb_colu_arab:
-    description: 'Site filters for use with SNP data for An. gambiae, An. coluzzii and/or An. arabiensis samples.'
+    description: "Site filters for use with SNP data for An. gambiae, An. coluzzii and/or An. arabiensis samples."
     driver: zarr_cat
     args:
-      urlpath: gs://vo_agam_release/v3/site_filters/dt_20200416/gamb_colu_arab
+      urlpath: "gs://vo_agam_release/v3/site_filters/dt_20200416/gamb_colu_arab"
       consolidated: true

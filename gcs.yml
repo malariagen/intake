@@ -5,7 +5,7 @@ sources:
 
   ag2:
     args:
-      path: {{CATALOG_DIR}}/gcs/ag2.yml
+      path: "{{CATALOG_DIR}}/gcs/ag2.yml"
     description: >
       The MalariaGEN Anopheles gambiae 1000 Genomes Project phase 2 data
       resource. Please note that data included in these catalogs are made
@@ -18,7 +18,7 @@ sources:
 
   ag3:
     args:
-      path: {{CATALOG_DIR}}/gcs/ag3.yml
+      path: "{{CATALOG_DIR}}/gcs/ag3.yml"
     description: >
       The MalariaGEN Anopheles gambiae 1000 Genomes Project phase 3 data
       resource. These data are published by the Anopheles gambiae 1000
@@ -30,7 +30,7 @@ sources:
 
   ag3_1:
     args:
-      path: {{CATALOG_DIR}}/gcs/ag3_1.yml
+      path: "{{CATALOG_DIR}}/gcs/ag3_1.yml"
     description: >
       The MalariaGEN Vector Observatory Anopheles gambiae 3.1 data resource.
       These data are published jointly by the Wellcome Sanger Institute and
