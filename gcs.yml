@@ -1,17 +1,43 @@
 metadata:
   version: 1
+
 sources:
 
   ag2:
     args:
       path: "{{CATALOG_DIR}}/gcs/ag2.yml"
-    description: 'Anopheles gambiae 1000 Genomes Project, phase 2 data resource.'
+    description: >
+      The MalariaGEN Anopheles gambiae 1000 Genomes Project phase 2 data
+      resource. Please note that data included in these catalogs are made
+      available prior to publication and subject to the Ag1000G terms of use -
+      https://www.malariagen.net/data/terms-use/ag1000g-terms-use. For more
+      information about this data resource see
+      https://www.malariagen.net/resource/27.
     driver: intake.catalog.local.YAMLFileCatalog
     metadata: {}
 
   ag3:
     args:
       path: "{{CATALOG_DIR}}/gcs/ag3.yml"
-    description: 'Anopheles gambiae 1000 Genomes Project, phase 3 data resource.'
+    description: >
+      The MalariaGEN Anopheles gambiae 1000 Genomes Project phase 3 data
+      resource. These data are published by the Anopheles gambiae 1000
+      Genomes Consortium. Please note that data included in these catalogs are
+      made available prior to publication and subject to the Ag1000G terms of
+      use - https://www.malariagen.net/data/terms-use/ag1000g-terms-use.
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}
+
+  ag3_1:
+    args:
+      path: "{{CATALOG_DIR}}/gcs/ag3_1.yml"
+    description: >
+      The MalariaGEN Vector Observatory Anopheles gambiae 3.1 data resource.
+      These data are published jointly by the Wellcome Sanger Institute and
+      their research partners. Please note that data included in these
+      catalogs are made available prior to publication and are subject to
+      terms of use. Analyses of these data are ongoing and a publication is in
+      preparation. It is not permitted to use the data for publication, i.e.,
+      any type of communication with the general public.
     driver: intake.catalog.local.YAMLFileCatalog
     metadata: {}
