@@ -38,3 +38,10 @@ sources:
     args:
       urlpath: "gs://ag1000g-release/phase2.AR1/haplotypes/main/zarr/ag1000g.phase2.ar1.haplotypes"
       consolidated: true
+
+  accessibility:
+    description: "Genome accessibility data."
+    driver: zarr_cat
+    args:
+      urlpath: "gs://ag1000g-release/phase2.AR1/accessibility/accessibility.zarr"
+      consolidated: true
