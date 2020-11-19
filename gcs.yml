@@ -3,6 +3,17 @@ metadata:
 
 sources:
 
+  ag1:
+    args:
+      path: "{{CATALOG_DIR}}/gcs/ag1.yml"
+    description: >
+      The MalariaGEN Anopheles gambiae 1000 Genomes Project phase 1 data
+      resource. Please note that data included in these catalogs are made
+      available prior to publication and subject to the Ag1000G terms of use -
+      https://www.malariagen.net/data/terms-use/ag1000g-terms-use.
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}
+
   ag2:
     args:
       path: "{{CATALOG_DIR}}/gcs/ag2.yml"
