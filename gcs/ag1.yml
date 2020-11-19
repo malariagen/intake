@@ -1,0 +1,47 @@
+metadata:
+  version: 1
+
+sources:
+
+  samples:
+    description: "Sample metadata."
+    driver: csv
+    args:
+      urlpath: "gs://ag1000g-release/phase1.AR3/samples/samples.meta.txt"
+      csv_kwargs:
+        sep: "	"
+
+  snps:
+    description: "SNP calls in wild samples, unfiltered."
+    driver: zarr_cat
+    args:
+      urlpath: "gs://ag1000g-release/phase1.AR3/variation/main/zarr/ag1000g.phase1.ar3"
+      consolidated: true
+
+  snps_pass:
+    description: "SNP calls in wild samples, PASS variants only."
+    driver: zarr_cat
+    args:
+      urlpath: "gs://ag1000g-release/phase1.AR3/variation/main/zarr/ag1000g.phase1.ar3.pass"
+      consolidated: true
+
+  snps_pass_biallelic:
+    description: "SNP calls in wild samples, biallelic PASS variants only."
+    driver: zarr_cat
+    args:
+      urlpath: "gs://ag1000g-release/phase1.AR3/variation/main/zarr/ag1000g.phase1.ar3.pass.biallelic"
+      consolidated: true
+
+  haps:
+    description: "Haplotypes in wild samples."
+    driver: zarr_cat
+    args:
+      urlpath: "gs://ag1000g-release/phase1.AR3.1/haplotypes/main/zarr/ag1000g.phase1.ar3.1.haplotypes"
+      consolidated: true
+
+  accessibility:
+    description: "Genome accessibility data."
+    driver: zarr_cat
+    args:
+      urlpath: "gs://ag1000g-release/phase1.AR3/accessibility/accessibility.zarr"
+      consolidated: true
