@@ -46,7 +46,7 @@ sources:
       urlpath: "gs://ag1000g-release/phase1.AR3/accessibility/accessibility.zarr"
       consolidated: true
 
-  allele_counts:
+  allele_counts_pass:
     description: "Allele counts at PASS SNPs."
     driver: zarr_cat
     args:
