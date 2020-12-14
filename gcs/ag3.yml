@@ -80,3 +80,9 @@ sources:
     args:
       urlpath: "gs://vo_agam_release/v3/site_filters/dt_20200416/gamb_colu_arab"
       consolidated: true
+
+  ena_runs:
+    description: "Catalog of ENA run accessions for sequencing data used for each sample."
+    driver: csv
+    args:
+      urlpath: "gs://vo_agam_release/v3/metadata/ena_runs.csv"
