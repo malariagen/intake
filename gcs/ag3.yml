@@ -86,3 +86,9 @@ sources:
     driver: csv
     args:
       urlpath: "gs://vo_agam_release/v3/metadata/ena_runs.csv"
+
+  ena_alignments:
+    description: "Catalog of ENA alignment accession for each sample."
+    driver: csv
+    args:
+      urlpath: "gs://vo_agam_release/v3/metadata/ena_alignments.csv"
